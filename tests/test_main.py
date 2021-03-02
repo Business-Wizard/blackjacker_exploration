@@ -21,5 +21,13 @@ def test_shuffled_is_not_null():
 
 
 def test_draw_from_top():
-    assert tester_deck.cards[-1] == tester_deck.draw_from_top()
+    top_card = tester_deck.cards[-1]
+    drawn_card = tester_deck.draw_from_top()
+    assert  top_card == drawn_card
+
+
+def test_reset_deck():
+    tester_deck.reset_deck()
+    assert tester_deck.cards == 4 * ['2', '3', '4', '5', '6', '7', '8', '9',
+                                     '10', 'Jack', 'Queen', 'King', 'Ace']
 
