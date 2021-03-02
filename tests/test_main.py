@@ -15,8 +15,11 @@ def test_shuffled_same_length():
     shuffled = tester_deck.cards
     assert original != shuffled
 
-def test_shuffled_not_null():
-    assert False
+def test_shuffled_is_not_null():
+    tester_deck.shuffle()
+    assert tester_deck.cards != None
 
-def test_generic():
-    assert True
+
+def test_draw_from_top():
+    assert tester_deck.cards[-1] == tester_deck.draw_from_top()
+
