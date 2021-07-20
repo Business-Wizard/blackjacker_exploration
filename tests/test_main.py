@@ -1,10 +1,8 @@
 import numpy as np
-from src.main import Deck
+from src.Deck import Deck
 import pytest
 from collections import Counter
 
-
-Deck_52 = Deck()
 
 @pytest.fixture
 def Deck_52():
