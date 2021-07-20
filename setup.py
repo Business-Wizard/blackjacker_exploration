@@ -1,12 +1,12 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='blackjacker',
+    name="blackjacker",
     packages=find_packages(),
-    version='0.1.0',
-    description='',
-    author='Joseph Wilson',
-    license='',
+    version="0.1.0",
+    description="",
+    author="Joseph Wilson",
+    license="",
 )
 
 # init:
