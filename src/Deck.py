@@ -12,6 +12,7 @@ class Deck():
         """Shuffles the order of cards in the deck
         """
         random.shuffle(self.cards)
+        return self.cards
 
     def draw_from_top(self):
         return self.cards.pop(-1)
