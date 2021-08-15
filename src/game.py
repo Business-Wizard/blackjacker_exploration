@@ -1,6 +1,6 @@
+from src.card import Card
 from src.deck import Deck
 from src.player import Dealer
-from src.card import Card
 
 
 class Game:

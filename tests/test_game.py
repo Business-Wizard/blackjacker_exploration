@@ -1,7 +1,8 @@
-from src.game import Game
 import pytest
-from src.deck import Deck
+
 from src.card import Card
+from src.deck import Deck
+from src.game import Game
 
 
 @pytest.fixture
@@ -33,5 +34,4 @@ def test_game_has_first_dealer_card(game):
 def test_game_has_one_dealer_card(game):
     game.start_game()
     game.play_round()
-
     assert isinstance(game.dealer_card, Card)
