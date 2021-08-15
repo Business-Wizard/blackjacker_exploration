@@ -1,7 +1,3 @@
-class Card:
-    def __init__(self, rank, suit):
-        self.rank = rank
-        self.suit = suit
+from collections import namedtuple
 
-    def __repr__(self):
-        return f"Card({self.rank}, {self.suit})"
+Card = namedtuple("Card", ["rank", "suit"])
