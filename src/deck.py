@@ -1,7 +1,6 @@
 import random
 from itertools import product
 from typing import List
-
 from src.card import Card
 
 
@@ -9,7 +8,8 @@ class Deck:
     """A representation of a deck of cards"""
 
     def __init__(self):
-        self.cards = self.reset_cards()
+        self.cards = []
+        self.reset_cards()
 
     def reset_cards(self):
         ranks: List[str] = [
@@ -31,7 +31,7 @@ class Deck:
         suits: List[str] = ["Spades", "Hearts", "Diamonds", "Clubs"]
 
         product_list = product(suits, ranks)
-        return [Card(rank, suit) for suit, rank in product_list]
+        self.cards = [Card(rank, suit) for suit, rank in product_list]
 
     def shuffle(self):
         """Shuffles the order of cards in the deck"""
