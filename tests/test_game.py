@@ -6,7 +6,7 @@ from src.game import Game
 
 
 @pytest.fixture
-def game():
+def game() -> Game:
     return Game()
 
 
@@ -35,3 +35,21 @@ def test_game_has_one_dealer_card(game):
     game.start_game()
     game.play_round()
     assert isinstance(game.dealer_card, Card)
+
+
+def test_game_starts_with_no_rounds_played(game):
+    game.start_game()
+    assert game.rounds_played == 0, "game started with rounds_played != 0"
+
+
+def test_game_plays_multiple_rounds(game):
+    game.start_game()
+    game.play_round(5)
+    assert game.rounds_played == 5, f"rounds_played is inaccurate: {game.rounds_played}"
+
+
+def test_game_reshuffles_when_low(game):
+    game.start_game()
+    game.deck.draw(50)
+    game.play_round()
+    assert len(game.deck.cards) > 40
