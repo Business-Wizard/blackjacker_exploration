@@ -1,11 +1,11 @@
 from collections import Counter
+from itertools import product
 from typing import List
 
 import pytest
 
-from src.Deck import Deck
-from itertools import product
 from src.Card import Card
+from src.Deck import Deck
 
 
 @pytest.fixture

@@ -1,6 +1,7 @@
 import random
-from typing import List
 from itertools import product
+from typing import List
+
 from src.Card import Card
 
 
