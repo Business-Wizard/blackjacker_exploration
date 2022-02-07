@@ -63,7 +63,7 @@ def test_draw(Deck_52):
 
 
 def test_draw_multiple(Deck_52):
-    top_cards = Deck_52.cards[0:3]
+    top_cards = Deck_52.cards[:3]
     drawn_cards = Deck_52.draw(3)
     assert drawn_cards == top_cards
 
